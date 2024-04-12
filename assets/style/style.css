@@ -55,7 +55,7 @@
   height: 100%;
   width: 100%;
   background-image: url("../img/bg.png");
-  background-size: contain;
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
@@ -236,12 +236,6 @@
 }
 .section-about .container .right-column {
   width: 66%;
-}
-.section-about .container .right-column .swiper {
-  width: 100%;
-  height: 100%;
-}
-.section-about .container .right-column .swiper .swiper-wrapper .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -252,24 +246,33 @@
   border-radius: 16px;
   overflow: hidden;
 }
+.section-about .container .right-column .swiper {
+  width: 100%;
+}
+.section-about .container .right-column .swiper .swiper-wrapper .swiper-slide {
+  background-color: #ffffff;
+}
 .section-about .container .right-column .swiper .swiper-wrapper .swiper-slide img {
   width: 100%;
 }
-.section-about .container .right-column .swiper .swiper-wrapper .swiper-slide .about-slide-description-container {
+.section-about .container .right-column .about-pagination {
+  display: none;
+}
+.section-about .container .right-column .about-slide-description-container {
   display: flex;
   flex-grow: 1;
   align-items: center;
   gap: 24px;
 }
-.section-about .container .right-column .swiper .swiper-wrapper .swiper-slide .about-slide-description-container .slide-description-item {
+.section-about .container .right-column .about-slide-description-container .slide-description-item {
   width: 210px;
   padding: 0 8px;
 }
-.section-about .container .right-column .swiper .swiper-wrapper .swiper-slide .about-slide-description-container .slide-description-item h6 {
+.section-about .container .right-column .about-slide-description-container .slide-description-item h6 {
   font-weight: 700;
   font-size: 32px;
 }
-.section-about .container .right-column .swiper .swiper-wrapper .swiper-slide .about-slide-description-container .slide-description-item p {
+.section-about .container .right-column .about-slide-description-container .slide-description-item p {
   font-weight: 700;
   font-size: 20px;
   text-align: center;
@@ -339,6 +342,9 @@
   font-weight: 400;
   font-size: 16px;
   color: #282828;
+}
+.section-equipment .container .eq-pagination {
+  display: none;
 }
 
 .section-prices {
