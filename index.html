@@ -15,7 +15,7 @@
     <title>Flamax</title>
 </head>
 <body>
-<div class="sticky-wrapper">
+<div class="sticky-wrapper collapsed">
     <nav class="navbar">
         <div class="container ">
             <div class="navbar-responsive">
@@ -200,20 +200,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="assets/img/900.png" alt="">
-                        <div class="about-slide-description-container">
-                            <div class="slide-description-item">
-                                <h6>9 лет</h6>
-                                <p>средний опыт работы сотрудника</p>
-                            </div>
-                            <div class="slide-description-item">
-                                <h6>2500м2</h6>
-                                <p>площадь производства</p>
-                            </div>
-                            <div class="slide-description-item">
-                                <h6>>40</h6>
-                                <p>опытных специалистов</p>
-                            </div>
-                        </div>
+
                     </div>
                     <div class="swiper-slide">Slide 2</div>
                     <div class="swiper-slide">Slide 3</div>
@@ -223,6 +210,21 @@
                     <div class="swiper-slide">Slide 7</div>
                     <div class="swiper-slide">Slide 8</div>
                     <div class="swiper-slide">Slide 9</div>
+                </div>
+            </div>
+            <div class="about-pagination"></div>
+            <div class="about-slide-description-container">
+                <div class="slide-description-item">
+                    <h6>9 лет</h6>
+                    <p>средний опыт работы сотрудника</p>
+                </div>
+                <div class="slide-description-item">
+                    <h6>2500м2</h6>
+                    <p>площадь производства</p>
+                </div>
+                <div class="slide-description-item">
+                    <h6>>40</h6>
+                    <p>опытных специалистов</p>
                 </div>
             </div>
         </div>
@@ -346,6 +348,8 @@
                 </div>
             </div>
         </div>
+
+        <div class="eq-pagination"></div>
     </div>
 </section>
 
@@ -535,6 +539,9 @@
         grabCursor: true,
         effect: "fade",
         loop: true,
+        pagination: {
+            el: ".about-pagination",
+        },
         navigation: {
             nextEl: ".next",
             prevEl: ".prev",
@@ -554,12 +561,30 @@
                 slidesPerView: 'auto',
             },
         },
+        pagination: {
+            el: ".eq-pagination",
+        },
         grabCursor: true,
         navigation: {
             nextEl: ".eq-next",
             prevEl: ".eq-prev",
         },
     });
+
+    function burgerMenu() {
+        const btn = document.querySelector('#burger');
+const navbar = document.querySelector('.sticky-wrapper');
+        btn.addEventListener('change', ()=>{
+            if (btn.checked === true){
+                navbar.classList.remove('collapsed')
+            } else {
+
+                navbar.classList.add('collapsed')
+            }
+        })
+    }
+
+    burgerMenu();
 
 </script>
 </body>
